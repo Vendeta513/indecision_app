@@ -1,9 +1,8 @@
 import React from 'react';
 import Option from './Option';
 
-const Options = (props) => {
-  return(
-    <div>
+const Options = (props) => (
+  <div>
       <button onClick={props.handleDeleteAll}>Remove All</button>
       {props.options.length === 0 && <p>Enter Add To Do item to get started!</p>}
       {props.options.map((option)=>
@@ -14,7 +13,6 @@ const Options = (props) => {
         />)
       }
     </div>
-  );
-};
+);
 
 export { Options as default };
